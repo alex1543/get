@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Get</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="get.css" />
+
+        <script>
+            function getProxy(mode, uId){
+				url = document.getElementById(uId).value;
+                document.getElementById('frame').src = 'proxy.php?mode='+mode+'&url='+encodeURIComponent(url);
+            }
+		</script>
+    </head>
+    <body>
+	
+        <iframe id="frame" src="">&nbsp;</iframe>
+		
+		<i>Get it through a proxy server:</i> 
+		
+		<input type="text" id="uView" value="https://www.php.net/manual/ru/function.curl-setopt" />
+        <button onclick="getProxy(1, 'uView')">View</button>
+		
+		<input type="text" id="uFile" value="https://se.moevm.info/lib/exe/fetch.php/courses:ml:idz_mag.pdf" />
+        <button onclick="getProxy(2, 'uFile')">Get file</button>
+
+		<i><b>by Subb</b></i> 
+
+    </body>
+</html>
